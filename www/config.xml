@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.hello-world"
+        version   = "2.0.0">
+    <name>Demo App</name>
+
+    <description>
+        Demo app for Android/iPhone.
+    </description>
+
+    <author href="eluriapp.biz" email="peluri@gmail.com">
+        Eluri Dev Team
+    </author>
+
+    <feature name="http://192.168.0.103:8000/" />
+
+    <preference name="phonegap-version" value="2.1.0" />
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
+
+    <icon src="www/Icon.png" />
+
+</widget>

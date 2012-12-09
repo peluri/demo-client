@@ -1,0 +1,41 @@
+#popup_container {
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	
+	text-align:center;
+	font-size: 12px;
+	width: 400px; 
+	height: 86px; 
+	background:#BFBFBF;
+	
+	border:double 1px #dedede;
+	border-bottom: solid 2px #456FA5;
+	color:#333333;
+	
+}
+
+#popup_title {
+display:none;
+}
+
+
+
+#popup_message {
+padding-top: 15px;
+padding-left: 15px;
+margin-bottom: -2%;
+}
+
+#popup_panel {
+text-align: center;
+padding-left:15px;
+}
+input
+{
+background-color:#A47E3C;
+padding:3px;
+color:#FFFFFF;
+margin-top:20px;
+margin-right:10px;
+}
+

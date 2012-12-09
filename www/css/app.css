@@ -1,0 +1,45 @@
+.container_format {
+  margin-right: auto;
+  margin-left:  auto;
+  margin-top: 1%;
+  width: 83%;
+  *zoom: 1;
+}
+
+
+.img {
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+.contentSpan10 {
+  width: 780px;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+.contentSpan11 {
+  width: 60%;
+  height: 10%;
+  margin-left: 4%;
+  margin-bottom: -2%;
+}
+
+.videoStyle {
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  margin-left: 10%;
+  margin-top: 2%;
+  
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}

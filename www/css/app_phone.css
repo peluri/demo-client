@@ -2,32 +2,40 @@
  * Ministry App v1.0.0
  *
  * @author peluri
- * Designed for the entire app.
+ * Designed for the phone app.
  */
 
-.html,.body {margin:0; padding:0;}
-/*.html,.body,.div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,hr {margin:0; padding:0;}
-h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th {font-size:1em; font-weight:normal; font-style:normal;}*/
-.ul,.ol {list-style:none;}
-.fieldset,.img,.hr {border:none;}
-.caption,.th {text-align:left;}
-.table {border-collapse:collapse; border-spacing:0;}
-.td {vertical-align:top;}
 
+/*  CSS Reset */
+.html,.body, .div {margin:0; padding:0;}
+.img {border:none;}
+
+/* body CSS */
 .bodyMain { 
 	background-image:url('../images/background.png');
 	background-repeat:no-repeat;
 	background-size:cover;
-	overflow:visible;
-	 height : inherit;
-  	width : auto;
+	min-width: 120px;
+  	max-width: 320px;
 	
 }
-.container{
+
+/* Container */
+.container_format {
+  width: 940px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 2%;
   *zoom: 1;
+}
+
+.img {
+  width: 250px;
+  height: 187.5px;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
 }
 
 .btn-toolbar {
@@ -46,15 +54,6 @@ h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th {font-size:1em
   *zoom: 1;
 }
 
-
-.img {
-  width: auto\9;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-}
 
 .contentSpan10 {
 
@@ -98,3 +97,11 @@ h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th {font-size:1em
   margin-left: 2%;
   margin-bottom: 2%;
 }
+
+/*.html,.body,.div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,hr {margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th {font-size:1em; font-weight:normal; font-style:normal;}
+.ul,.ol {list-style:none;}
+.fieldset,.img,.hr {border:none;}
+.caption,.th {text-align:left;}
+.table {border-collapse:collapse; border-spacing:0;}
+.td {vertical-align:top;}*/

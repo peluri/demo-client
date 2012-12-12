@@ -5,24 +5,48 @@
  * Designed for the entire app.
  */
 
-.html,.body {margin:0; padding:0;}
-/*.html,.body,.div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,hr {margin:0; padding:0;}
-h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th {font-size:1em; font-weight:normal; font-style:normal;}*/
-.ul,.ol {list-style:none;}
-.fieldset,.img,.hr {border:none;}
-.caption,.th {text-align:left;}
-.table {border-collapse:collapse; border-spacing:0;}
-.td {vertical-align:top;}
+
 
 .bodyMain { 
 	background-image:url('../images/background.png');
 	background-repeat:no-repeat;
 	background-size:cover;
-	overflow:visible;
-	 height : inherit;
-  	width : auto;
-	
+	height: inherit;
+	width: 100%;
+	overflow: visible;
 }
+
+@media screen and (max-width: 480px) {
+	
+  a img 
+  {
+	  width: 57px;
+	  height: 57px;
+  }
+  
+  .contentSpan10 img 
+  {
+	  width: 144px;
+	  height: 144px;
+  }  
+}
+
+@media screen and (max-width: 480px) and (orientation: landscape) {
+  a img 
+  {
+	  width: 57px;
+	  height: 57px;
+  }
+  
+  .contentSpan10 img 
+  {
+	  width: 488px;
+	  height: 488px;
+  }  
+}
+
+
+
 .container{
   margin-right: auto;
   margin-left: auto;
@@ -31,17 +55,17 @@ h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th {font-size:1em
 }
 
 .btn-toolbar {
-  margin-top: 10px;
-  margin-bottom: 10px;
+	position:inherit;
+  margin-top: 1%;
+  margin-bottom: 1%;
   font-size: 0;
 }
 .btn-group {
-  position: relative;
+  position: inherit;
   display: inline-block;
   *display: inline;
   *margin-left: .3em;
   font-size: 0;
-  white-space: nowrap;
   vertical-align: middle;
   *zoom: 1;
 }
@@ -98,3 +122,4 @@ h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th {font-size:1em
   margin-left: 2%;
   margin-bottom: 2%;
 }
+* { -webkit-transition: width .5s; }

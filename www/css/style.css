@@ -199,21 +199,21 @@ float:left;
 
 #carousel_ul {
 position:relative;
-left:-950px; /* important (this should be negative number of list items width(including margin) */
+left:-100%; /* important (this should be negative number of list items width(including margin) */
 list-style-type: none; /* removing the default styling for unordered list items */
 margin: 0px;
 padding: 0px;
-width:9999px; /* important */
+width:1000%; /* important */
 /* non-important styling bellow */
 }
 
 #carousel_ul li{
 float: left; /* important for inline positioning of the list items */
-width:950px;  /* fixed width, important */
+width: 10%;  /* fixed width, important */
 /* just styling bellow*/
 padding:0px;
-height:475px;
-margin:-30px 0 0 0;
+height:5%;
+
 }
 
 #carousel_ul li #featured_image {
@@ -225,8 +225,10 @@ margin:-30px 0 0 0;
 #carousel_ul li #picture_image {
 	
 	position:relative;
-	margin-left: 40%;
-	margin-top: 10%
+	margin-left: 10%;
+	margin-top: 10%;
+	margin-right: 50%;
+	vertical-align: top;
 }
 
 #carousel_ul li #picture_image a img {

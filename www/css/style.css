@@ -251,33 +251,35 @@ margin:-30px 0 0 0;
 
 
 #left_scroll a, #right_scroll a{
-  background:url(../images/new/sprite.png) no-repeat 0 0;
-  width:97px;
-  height:97px;
+  
+  width:10px;
+  height:10px;
 
 }
 #left_scroll a {
+background:url(../images/carousel_backward.png) no-repeat 0 0;
 border:0; /* remove the default border of linked image */
 /*styling*/
 cursor: pointer;
 cursor: hand;
-width:97px;
-height:276px;
-background-position:-231px -608px;
+width:80%;
+height:80%;
+/*background-position:-231px -608px;*/
   left:0px;
-  display:block;
+  display:inline-block;
   float:left;
 }
 #right_scroll a {
+background:url(../images/carousel_forward.png) no-repeat 0 0;	
 border:0; /* remove the default border of linked image */
 /*styling*/
 cursor: pointer;
 cursor: hand;
-width:97px;
-height:276px;
-background-position: -346px -608px;
+width:80%;
+height:80%;
+/*background-position: -346px -608px; */
   right:0;
-  display:block;
+  display:inline-block;
   float:left;
 }
 

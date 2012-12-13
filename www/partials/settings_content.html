@@ -5,10 +5,18 @@
 		<link rel="stylesheet" type="text/css" href="css/app.css">
 	</head>
 	<body>
-		<div class="iframe10">
-		<IFRAME src="http://192.168.0.103:8000/server/www/media/ppt/iframe_view.html" style="border:1px solid #000000; width:720px; height:540px;" >
-			[Your user agent does not support frames or is currently configured not to display frames.
-		</IFRAME>
-		</div>
+		
+		
+		<!-- IFRAME src="http://192.168.0.103:8000/server/www/media/ppt/iframe_view.html" class="iframe10" >
+			[Your user agent does not support frames or is currently configured not to display frames.]
+		</IFRAME -->
+
+
+	    <div class="h_iframe">
+	        <!-- a transparent image is preferable -->
+	        <img class="ratio" src="images/16x9.gif"/>
+	        <iframe src="http://192.168.0.103:8000/server/www/media/ppt/iframe_view.html" frameborder="0"></iframe>
+	    </div>    
+
 	</body>
 </html>

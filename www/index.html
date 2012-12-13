@@ -1,101 +1,75 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Ministry App - Demo</title>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-		<META HTTP-EQUIV="Expires" CONTENT="-1">
-			
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-		<link rel="stylesheet" type="text/css" href="css/app.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
-		<link rel="stylesheet" type="text/css" href="css/facebook.alert.css">
-		
-
-		<script type="text/javascript">
-		
-		$(document).ready(function ()
-		{  
-			setTimeout(function ()
-			{  
-			    var w1 = $(window).width();  
-			    $('meta[name="viewport"]').remove();//remove previous metatag (no reason just so we keep it clean)  
-			    var px = 480;//target width to achieve  
-			    var x = 320/w1;// calculate ratio (320 is the width set by viewport on head->meta,  
-			    var out = Math.floor(px*x);//outcome..  
-			    // var out = Math.floor( (32/ w1) * 480 )// alternative shortcode remove the 3 lines above <img src="http://www.jqui.net/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">   
-			    $('<meta name="viewport" id="the_vp_special" content="width=320,initial-scale=1.0,target-densityDPI='+out+'dpi">').appendTo('head');//insert the new meta tag on the head   
-			},150);  
-		}); 
-
-			$(document).ready(function() {
-				$("#delete_confirm").click(function() {
-					jConfirm('Are you sure you want to close the Ministry application?', 'Confirmation Dialog', function(r) {
-
-						if (r == true) {
-							var ww = window.open(window.location.href, '_self');
-							ww.close();
-						}
-					});
-				});
-			});
-			function closeWindow() {
-				$('a').confirm();
-				/*if (confirm("Close Window?"))
-				 {
-				 setTimeout(function(){var ww = window.open(window.location, '_self'); ww.close(); }, 1000);
-				 }*/
-			}
-
-			function loadContent(which, contentUrl) {
+    <!-- Style Sheets -->
+    
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- link href="css/docs.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet" -->    	
+    <link href="css/app.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    
+    <script type="text/javascript">
+    
+        // This loads page body with main content.
+    	function loadContent(which, contentUrl) 
+    	{
 				$('#div_content').load(contentUrl);
-			}
-
-		</script>
-
-	</head>
-	<body class="bodyMain">
-		<div class="container-fluid">
-		   <div class="row-fluid"> 
-			  <div class="span12 offset2">
-				<div class="btn-toolbar">
-					<div class="btn-group">
-						<a class="btn" href="javascript:loadContent(this, 'partials/scorecard_content.html');"><img src="images/Scorecard.png" alt="Score Card" title="Scorecard"  /></a>
-						<a class="btn" href="javascript:loadContent(this, 'partials/lesson_content.html');"><img  class="img-format" src="images/Lessons.png" alt="Lessons" title="Lessons"  /></a>
-						<a class="btn" href="javascript:loadContent(this, 'partials/music_content.html');"><img src="images/Music.png" alt="Music" title="Music"  /></a>
-						<a class="btn" href="javascript:loadContent(this, 'partials/missionStory_content.html');"><img src="images/Mission_Story.png" alt="Mission story" title="Mission story"  /></a>
-						<a href="javascript:loadContent(this, 'partials/memoryVerse_content.html');"><img src="images/Memory_Verses.png" alt="Memoery Verses" title="Memoery Verses"  /></a>
-						<a href="javascript:loadContent(this, 'partials/games_content.html');"><img src="images/games.png" alt="Games" title="Games"  /></a>
-
-						<a href="javascript:loadContent(this, 'partials/games_content.html');"><img src="images/buttin_back.png" /></a>
-						<a href="javascript:loadContent(this, 'partials/games_content.html');"><img src="images/button_pause.png" /></a>
-						<a href="javascript:loadContent(this, 'partials/games_content.html');"><img src="images/button_forward.png" /></a>
-
-						<a href="javascript:loadContent(this, 'partials/settings_content.html');"><img src="images/settings.png" title="Settings" /></a>
-						<a href="javascript:loadContent(this, 'partials/volume_content.html');"><img src="images/Volume.png" /></a>
-						<a href="#" id="delete_confirm"><img src="images/Close.png" title="Close"/></a>
-
-					</div>
-					<!-- btn-group -->
-				</div>
-				<!-- btn-toolbar -->
-			</div>
-			</div>
-			<!-- btn-span4 -->
-			
-			<!-- Body -->
-			<div class="row-fluid"> 
-				<div class="span12 offset2">
-					<div id="div_content"></div>
-				</div>
-			</div>
-
-		</div>
-		<!-- container -->
+		}
 		
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="js/jquery.js"></script>		
-		<script type="text/javascript" src="js/jquery_facebook.alert.js"></script>		
-	</body>
+    </script>
+  </head>
+
+  <body>
+
+       <div class="row-fluid show-grid">
+       	    <div class="span4"></div>	
+        	<div class="span8">
+        		<a class="btn" href="javascript:loadContent(this, 'partials/scorecard_content.html');"><img src="images/Scorecard.png" alt="Score Card" title="Scorecard"  /></a>
+       			<a class="btn" href="javascript:loadContent(this, 'partials/lesson_content.html');"><img  class="img-format" src="images/Lessons.png" alt="Lessons" title="Lessons"  /></a>
+        		<a class="btn" href="javascript:loadContent(this, 'partials/music_content.html');"><img src="images/Music.png" alt="Music" title="Music"  /></a>
+        		<a class="btn" href="javascript:loadContent(this, 'partials/missionStory_content.html');"><img src="images/Mission_Story.png" alt="Mission story" title="Mission story"  /></a>
+        		<a href="javascript:loadContent(this, 'partials/memoryVerse_content.html');"><img src="images/Memory_Verses.png" alt="Memoery Verses" title="Memoery Verses"  /></a>
+        		<a href="javascript:loadContent(this, 'partials/games_content.html');"><img src="images/games.png" alt="Games" title="Games"  /></a>
+        		<a href="javascript:loadContent(this, 'partials/settings_content.html');"><img src="images/settings.png" title="Settings" /></a>
+        	</div>
+        	
+        	<!--
+        	<div class="span1 offset2">
+        		<a class="btn" href="javascript:loadContent(this, 'partials/scorecard_content.html');"><img src="images/Scorecard.png" alt="Score Card" title="Scorecard"  /></a>
+        	</div>
+        	<div class="span1">
+        		<a class="btn" href="javascript:loadContent(this, 'partials/lesson_content.html');"><img  class="img-format" src="images/Lessons.png" alt="Lessons" title="Lessons"  /></a>
+        	</div>
+        	<div class="span1">
+        		<a class="btn" href="javascript:loadContent(this, 'partials/music_content.html');"><img src="images/Music.png" alt="Music" title="Music"  /></a>
+        	</div>
+        	<div class="span1">
+        		<a class="btn" href="javascript:loadContent(this, 'partials/missionStory_content.html');"><img src="images/Mission_Story.png" alt="Mission story" title="Mission story"  /></a>
+        	</div>
+        	<div class="span1">
+        		<a class="btn" href="javascript:loadContent(this, 'partials/memoryVerse_content.html');"><img src="images/Memory_Verses.png" alt="Memoery Verses" title="Memoery Verses"  /></a>
+        	</div>
+        	<div class="span1">
+        		<a class="btn" href="javascript:loadContent(this, 'partials/games_content.html');"><img src="images/games.png" alt="Games" title="Games"  /></a>
+        	</div>
+        	<div class="span1">
+        		<a class="btn" href="javascript:loadContent(this, 'partials/settings_content.html');"><img src="images/settings.png" title="Settings" /></a>
+        	</div -->
+      </div><!-- row-fluid show-grid -->
+      
+       <div class="row-fluid show-grid">       	
+        	<div class="span10 offset2">
+          		<div id="div_content"></div>
+        	</div><!-- span10 offset2 -->
+      </div><!-- row-fluid show-grid -->
+      
+
+  </body>
 </html>

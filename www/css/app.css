@@ -117,7 +117,7 @@ img {
 
 #carousel_ul {
 	position:relative;
-	left:-100%; /* important (this should be negative number of list items width(including margin) */
+	left:-950px; /* important (this should be negative number of list items width(including margin) */
 	list-style-type: none; /* removing the default styling for unordered list items */
 	margin: 0px;
 	padding: 0px;
@@ -127,10 +127,11 @@ img {
 
 #carousel_ul li{
 	float: left; /* important for inline positioning of the list items */
-	width: 10%;  /* fixed width, important */
+	width: 950px;  /* fixed width, important */
 	/* just styling bellow*/
-	
-	height:5%;
+	padding:0px;
+	height:475px;
+	margin:0 0 0 0;
 }
 
 
@@ -161,7 +162,7 @@ img {
 	height:80%;
 	/*background-position:-231px -608px;*/
 	left:0px;
-	display:block;
+	display: compact;
 	float:left;
 }
 #right_scroll a {
@@ -174,7 +175,7 @@ img {
 	height:80%;
 	/*background-position: -346px -608px; */
 	right:0;
-	display:inline-block;
+	display:compact;
 	float:left;
 }
 
@@ -185,34 +186,4 @@ img {
 #right_scroll a:hover {
 	background-position: -112px -608px;
 }
-
-/*#carousel_ul li p {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size:16px;
-	color:#FFF;
-	text-indent:0px;
-	top:120px;
-	left:60px;
-	position:relative;
-	font-weight:normal;
-	z-index:6;
-	max-width:405px;
-	max-height:75px;
-	line-height:20px;
-	text-align:center;
-}
-
-#carousel_ul li #featured_image {
-	top:85px;
-	left:50px;
-	position:relative;
-}
-
-#carousel_container {
-	width:1150px;
-	height:475px;
-	display:block;
-}
-* */
-
 

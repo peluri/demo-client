@@ -8,13 +8,17 @@
     <meta name="author" content="">
 
 	<link href="css/app.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    
     <script src="js/jquery.js"></script>
     
-	<script type="text/javascript">    
+	<script type="text/javascript">
+	
+		$(window).bind('resize', function() { location.reload(); });
+		
+		/**  Based on screen/browser width load full blown page or condensed page. **/		    
 		$(window).on('load', function () 
-		{
-			if ($(this).width() <= 480) {
+		{			
+			if ($(this).width() <= 768) {
 				$('#my-container').load('index-phone.html');
 			} else {
 				$('#my-container').load('index_pc.html');

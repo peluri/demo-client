@@ -7,15 +7,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Style Sheets -->
-    
+	<link href="css/app.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <!-- link href="css/docs.css" rel="stylesheet">
-	<link href="css/bootstrap.css" rel="stylesheet" -->    	
-    <link href="css/app.css" rel="stylesheet">
     <script src="js/jquery.js"></script>
     
-<script type="text/javascript">
+	<script type="text/javascript">    
+		$(window).on('load', function () 
+		{
+			if ($(this).width() <= 480) {
+				$('#my-container').load('index-phone.html');
+			} else {
+				$('#my-container').load('index_pc.html');
+			}
+		});
+	</script>
+	
+	<script type="text/javascript">
 			$(document).ready(function() {
 
 				//options( 1 - ON , 0 - OFF)
@@ -122,73 +129,13 @@
 			}
 
 		</script>
+	
+
   </head>
 
   <body>
 
-       <div class="row-fluid">
-       	    <div class="span1">				
-					<a href='javascript:slide("left");'><img src="images/carousel_backward.png" /></a>				       	    	
-       	    </div>	
-       	    
-        	<div class="span4">
-        		<div id="carousel_inner">
-					<ul id="carousel_ul">
-						<li>
-							<div id="picture_image">
-				        		<a class="btn" href="javascript:loadContent(this, 'partials/scorecard_content.html');"><img src="images/Scorecard.png" alt="Score Card" title="Scorecard"  /></a>
-				        		<a class="btn" href="javascript:loadContent(this, 'partials/lesson_content.html');"><img  class="img-format" src="images/Lessons.png" alt="Lessons" title="Lessons"  /></a>
-				        		<a class="btn" href="javascript:loadContent(this, 'partials/music_content.html');"><img src="images/Music.png" alt="Music" title="Music"  /></a>
-				        		<a class="btn" href="javascript:loadContent(this, 'partials/missionStory_content.html');"><img src="images/Mission_Story.png" alt="Mission story" title="Mission story"  /></a>
-				        	</div>
-			        		
-			            </li>
-			            <li>
-			        		<div id="picture_image">
-			        			<a href="javascript:loadContent(this, 'partials/memoryVerse_content.html');"><img src="images/Memory_Verses.png" alt="Memoery Verses" title="Memoery Verses"  /></a>
-								<a href="javascript:loadContent(this, 'partials/games_content.html');"><img src="images/games.png" alt="Games" title="Games"  /></a>
-				        		<a href="javascript:loadContent(this, 'partials/settings_content.html');"><img src="images/settings.png" title="Settings" /></a>
-			        		</div>
-			        	</li>			        				        					
-			  	</div> <!-- carousel_ul -->
-			</div>
-			  	
-			<div class="span1">
-				<a href='javascript:slide("right");'><img src="images/carousel_forward.png" /></a>
-			</div>
-			
-			<div class="span4">
-			</div>
-        	<!--
-        	<div class="span1 offset2">
-        		<a class="btn" href="javascript:loadContent(this, 'partials/scorecard_content.html');"><img src="images/Scorecard.png" alt="Score Card" title="Scorecard"  /></a>
-        	</div>
-        	<div class="span1">
-        		<a class="btn" href="javascript:loadContent(this, 'partials/lesson_content.html');"><img  class="img-format" src="images/Lessons.png" alt="Lessons" title="Lessons"  /></a>
-        	</div>
-        	<div class="span1">
-        		<a class="btn" href="javascript:loadContent(this, 'partials/music_content.html');"><img src="images/Music.png" alt="Music" title="Music"  /></a>
-        	</div>
-        	<div class="span1">
-        		<a class="btn" href="javascript:loadContent(this, 'partials/missionStory_content.html');"><img src="images/Mission_Story.png" alt="Mission story" title="Mission story"  /></a>
-        	</div>
-        	<div class="span1">
-        		<a class="btn" href="javascript:loadContent(this, 'partials/memoryVerse_content.html');"><img src="images/Memory_Verses.png" alt="Memoery Verses" title="Memoery Verses"  /></a>
-        	</div>
-        	<div class="span1">
-        		<a class="btn" href="javascript:loadContent(this, 'partials/games_content.html');"><img src="images/games.png" alt="Games" title="Games"  /></a>
-        	</div>
-        	<div class="span1">
-        		<a class="btn" href="javascript:loadContent(this, 'partials/settings_content.html');"><img src="images/settings.png" title="Settings" /></a>
-        	</div -->
-      </div><!-- row-fluid show-grid -->
-      
-       <div class="row-fluid">       	
-        	<div class="span10 offset2">
-          		<div id="div_content"></div>
-        	</div><!-- span10 offset2 -->
-      </div><!-- row-fluid show-grid -->
-      
+<div id="my-container"></div>
 
   </body>
 </html>

@@ -22,7 +22,30 @@ html {
 }
 
 
-
+@media screen and (max-width: 480px) {
+	.iframe10 {
+	  border:1px solid #000000; 
+	  width:80%; 
+	  height:80%;
+	 }
+	 
+	#carousel_ul li #picture_image a img {
+		max-height:150%;
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+		width: auto\9; /* ie8 */
+	}
+	
+	.video embed,
+	.video object,
+	.video iframe {
+		width: 100%;
+		height: auto;
+}
+}
 .btn-toolbar {
   margin-top: 1%;
   margin-bottom: 1%;
@@ -88,16 +111,6 @@ img {
   clear: both;
 }
 
-@media screen and (max-width: 480px) {
-	.iframe10 {
-	  border:1px solid #000000; 
-	  width:80%; 
-	  height:80%;
-	 }
-	#carousel_ul li #picture_image a img {
-		max-height:150%;
-	}
-}
 	
 .wrapper         {width:80%;height:100%;margin:0 auto;background:#CCC}
 .h_iframe        {position:relative;}

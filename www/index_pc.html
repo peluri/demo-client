@@ -39,10 +39,22 @@
 				$('#div_content').load(contentUrl);
 			}
 
+			$(function() {
+			     $(".playback").click(function(e) {
+			       e.preventDefault();
+			
+			       var song = document.getElementsByTagName('audio')[0];
+			       if (song.paused)
+			         song.play();
+			       else
+			         song.pause();
+			     });
+			   });		
+
 		</script>
 
 	</head>
-	<body class="bodyMain">
+	<body >
 		<div class="container-fluid">
 		   <div class="row-fluid"> 
 			  <div class="span12 offset2">
@@ -60,7 +72,7 @@
 						<a href="javascript:loadContent(this, 'partials/games_content.html');"><img src="images/button_forward.png" /></a>
 
 						<a href="javascript:loadContent(this, 'partials/settings_content.html');"><img src="images/settings.png" title="Settings" /></a>
-						<a href="javascript:loadContent(this, 'partials/volume_content.html');"><img src="images/Volume.png" /></a>
+						<a href="#" class="playback"><img src="images/Volume.png" /></a>
 						<a href="#" id="delete_confirm"><img src="images/Close.png" title="Close"/></a>
 			  </div> <!-- btn-span12 -->
 			</div> <!-- row-fluid -->

@@ -20,7 +20,8 @@
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
     
-    <content src="index.html" />
+    <gap:splash src="splash.png"  gap:platform="android" gap:density="ldpi" />
+    <!-- content src="index.html" / -->
 
     <icon src="Icon.png" />
 

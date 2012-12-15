@@ -13,12 +13,14 @@
         Eluri Dev Team
     </author>
 
-    <feature name="http://192.168.0.103:8000/" />
+    <feature name="http://localhost:8000/" />
 
     <preference name="phonegap-version" value="2.1.0" />
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
+    
+    <content src="index.html" />
 
     <icon src="Icon.png" />
 

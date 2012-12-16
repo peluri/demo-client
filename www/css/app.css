@@ -143,11 +143,6 @@ img {
 	  height:100%;
 	 }
 	 
-	#carousel_ul li #picture_image a img {
-		max-width: 100%;
-		height: 100%;
-		width: auto\9; /* ie8 */
-	}
 	
 
 	/* New Banner Sliding Gallery
@@ -175,8 +170,8 @@ img {
 		float: left; /* important for inline positioning of the list items */
 		width: 10%;  /* fixed width, important */
 		/* just styling bellow*/
-		padding:0px;
 		height:5%;
+		margin: 0;
 	}
 	
 	
@@ -185,16 +180,18 @@ img {
 		margin-right: 0%;
 		margin-top: 0%;
 		vertical-align: top;
+		width: 100%;
+		float: left;
 	}
 	
-	#carousel_ul li .picture_image a img {
-		max-height:100%;
-	}
+	
 
+	/* This is for main content and applied to all htmls in "partials" folder. */
 	.contentSpan10{
 
 	}
 	
+	/* General good practice for videos */ 
 	.video embed,
 	.video object,
 	.video iframe {

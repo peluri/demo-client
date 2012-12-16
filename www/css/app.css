@@ -103,8 +103,6 @@ img {
 }
 
 
-
-
 .span1{
 	float: left;
 	width:10%;
@@ -120,8 +118,65 @@ img {
 	width: 100%;
 }
 
-/* This styling is for small devices (Phone/tablt portrait) version.
------------------------------------------------------------------- */
+  .row-fluid {
+    width: 100%;
+    *zoom: 1;
+  }
+  .row-fluid:before, .row-fluid:after {
+    display: table;
+    content: "";
+  }
+  .row-fluid:after {
+    clear: both;
+  }
+  .row-fluid > [class*="span"] {
+    float: left;
+    margin-left: 2.564102564%;
+  }
+  .row-fluid > [class*="span"]:first-child {
+    margin-left: 0;
+  }
+  .row-fluid > .span1 {
+    width: 5.982905983%;
+  }
+  .row-fluid > .span2 {
+    width: 14.529914530000001%;
+  }
+  .row-fluid > .span3 {
+    width: 23.076923077%;
+  }
+  .row-fluid > .span4 {
+    width: 31.623931624%;
+  }
+  .row-fluid > .span5 {
+    width: 40.170940171000005%;
+  }
+  .row-fluid > .span6 {
+    width: 48.717948718%;
+  }
+  .row-fluid > .span7 {
+    width: 57.264957265%;
+  }
+  .row-fluid > .span8 {
+    width: 65.81196581200001%;
+  }
+  .row-fluid > .span9 {
+    width: 74.358974359%;
+  }
+  .row-fluid > .span10 {
+    width: 82.905982906%;
+  }
+  .row-fluid > .span11 {
+    width: 91.45299145300001%;
+  }
+  .row-fluid > .span12 {
+    width: 100%;
+  }
+
+/***************************************************************************
+ *  This styling is for small devices (Phone/tablt portrait) version.
+ *
+ *****************************************************************************/
 @media screen and (max-width: 768px) {
 	
 	body { 
@@ -197,5 +252,24 @@ img {
 	.video iframe {
 		width: 100%;
 		height: auto;
-  }
+    }
+    
+	.carousel_img {
+		  width: auto\9;
+		  height: auto;
+		  max-width: 100%;
+		  border: 0;
+		  -ms-interpolation-mode: bicubic;
+		  margin-top: 10%;
+		  margin-left: 5%;
+	}
+}
+
+	@media screen and (max-width: 800px) {
+		body 
+		{ 
+			margin-top: 0%;
+			margin-left: 3%;
+			margin-right: 0%;			
+		}    
 }

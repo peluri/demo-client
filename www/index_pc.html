@@ -2,12 +2,8 @@
 <html>
 	<head>
 		<title>Ministry App - Demo</title>
-
-		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-		<META HTTP-EQUIV="Expires" CONTENT="-1">
 			
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<link rel="stylesheet" type="text/css" href="css/facebook.alert.css">
 		<link rel="stylesheet" type="text/css" href="css/app.css">
@@ -38,17 +34,7 @@
 				$('#div_content').load(contentUrl);
 			}
 
-			$(function() {
-			     $(".playback").click(function(e) {
-			       e.preventDefault();
-			
-			       var song = document.getElementsByTagName('audio')[0];
-			       if (song.paused)
-			         song.play();
-			       else
-			         song.pause();
-			     });
-			   });		
+	
 
 		</script>
 
@@ -61,7 +47,7 @@
 						<div class="span1">
 							<a href="javascript:loadContent(this, './partials/scorecard_content.html');"><img src="images/Scorecard.png" alt="Score Card" title="Scorecard"  /></a>
 							<a href="javascript:loadContent(this, './partials/lesson_content.html');"><img  class="img-format" src="images/Lessons.png" alt="Lessons" title="Lessons"  /></a>
-							<a href="javascript:loadContent(this, './partials/music_content.html');"><img src="images/Music.png" alt="Music" title="Music"  /></a>
+							<a href="javascript:loadContent(this, './partials/music_v2.html');"><img src="images/Music.png" alt="Music" title="Music"  /></a>
 							<a href="javascript:loadContent(this, './partials/missionStory_content.html');"><img src="images/Mission_Story.png" alt="Mission story" title="Mission story"  /></a>
 							<a href="javascript:loadContent(this, './partials/memoryVerse_content.html');"><img src="images/Memory_Verses.png" alt="Memoery Verses" title="Memoery Verses"  /></a>
 							<a href="javascript:loadContent(this, './partials/games_content.html');"><img src="images/games.png" alt="Games" title="Games"  /></a>
@@ -86,7 +72,7 @@
 		</div><!-- container -->
 		
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="./js/jquery-1.7.2.min"></script>		
+		<script src="./js/jquery.js"></script>		
 		<script type="text/javascript" src="./js/jquery_facebook.alert.js"></script>		
 	</body>
 </html>

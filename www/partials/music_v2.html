@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ministry App - Demo</title>
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/buzz.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script type="text/javascript">
+		
+			//Create the new Sound object - Spider-Man: Mark of the Man-Wolf
+			var sound = new buzz.sound("http://www.archive.org/download/BDW4MP3018/HardcoreBeatz2009", {
+				formats: [ "ogg", "mp3" ],
+				preload: true,
+				autoload: true,
+				loop: false
+			});
+			
+			// Play the music on Audio
+			$(document).ready(function()
+			{
+				sound.play();
+			});
+
+			// Going away from Music tab				
+			$(window).unload(function(){
+			   playPauseAudio();
+			});
+			
+			// Plays or Pause audio
+			function playPauseAudio() 
+			{
+				if(sound.isPaused())
+				{
+					sound.play();
+				}
+				else
+				{
+					sound.pause();
+				}
+			}
+			
+			
+	    </script>
+
+	</head>
+	<body onunload="javascript: playPauseAudio();">
+		<div class="contentSpan10">
+			<!--video id="video1" preload="none" width="0%" height="0%" autoplay="autoplay">
+				<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' > </source>
+				<source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' > </source>
+				<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg'></source>
+		        HTML5 audio not supported
+		    </video-->
+		    <a href="javascript: playPauseAudio();">
+				<img src="media/pics/music.png" />
+			</a>
+
+				<!--video id="video1" preload="none" width="0%" height="0%" autoplay="autoplay">
+					<source src="http://www.archive.org/download/BDW4MP3018/HardcoreBeatz2009.mp3" type='video/mp3' > </source>
+					<source src="http://www.archive.org/download/BDW4MP3018/HardcoreBeatz2009.ogg" type='video/ogg'></source>
+					Your browser does not support the video tag.
+				</video -->
+		</div>
+	</body>
+</html>

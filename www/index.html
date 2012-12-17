@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+    <link rel="apple-touch-icon"  href="Icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="Icon.png" />    
 
 	<link href="css/app.css" rel="stylesheet">
     
@@ -13,11 +16,11 @@
     
 	<script type="text/javascript">
 	
-		$(window).bind('resize', function() { location.reload(); });
+		// $(window).bind('resize', function() { location.reload(); });
 		
 		/**  Based on screen/browser width load full blown page or condensed page. **/		    
 		$(window).on('load', function () 
-		{			
+		{
 			if ($(this).width() <= 768) {
 				$('#my-container').load('index-phone.html');
 			} else {
@@ -132,6 +135,16 @@
 				$('#div_content').load(contentUrl);
 			}
 
+			$(function() {
+			     $(".playback").click(function(e) {
+			
+			       var video = document.getElementsByTagName('video')[0];
+			       if (video.paused)
+			         video.play();
+			       else
+			         video.pause();
+			     });
+			   });	
 		</script>
 
   </head>

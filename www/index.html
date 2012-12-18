@@ -26,10 +26,13 @@
 			} else {
 				$('#my-container').load('index_pc.html');
 			}
+			
 		});
 	</script>
 	
 	<script type="text/javascript">
+			var carouselFlag = parseInt(1); 
+			
 			$(document).ready(function() {
 
 				//options( 1 - ON , 0 - OFF)
@@ -96,6 +99,8 @@
 
 				//get the item width
 				var item_width = $('#carousel_ul li').outerWidth();
+				
+				
 
 				/* using a if statement and the where variable check
 				 we will check where the user wants to slide (left or right)*/
@@ -128,6 +133,17 @@
 						'left' : '-100%'
 					});
 				});
+				
+				// Carousel function
+				carouselFlag++;
+				if(carouselFlag % 2 == 0)
+				{
+					loadContent(this, './partials/scorecard_content.html');
+				}
+				else
+				{
+					loadContent(this, './partials/memoryVerse_content.html');
+				}
 
 			}
 			
@@ -150,8 +166,6 @@
   </head>
 
   <body>
-
-  <div id="my-container"></div>
-
-  </body>
+	  <div id="my-container"></div>
+ </body>
 </html>

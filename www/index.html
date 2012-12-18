@@ -32,7 +32,8 @@
 	
 	<script type="text/javascript">
 			var carouselFlag = parseInt(1); 
-			
+			var screenName = '';
+						
 			$(document).ready(function() {
 
 				//options( 1 - ON , 0 - OFF)
@@ -146,21 +147,60 @@
 				}
 
 			}
-			
-			function loadContent(which, contentUrl) {				
+
+			// This function loads the body with argument html page.			
+			function loadContent(which, contentUrl) 
+			{
+				// This is to mute the audio if user is coming out of audio section
+				if(screenName.length > 0 && screenName.indexOf("music") !== -1)
+					volumeControl();
+				
+				screenName = contentUrl;
+				
 				$('#div_content').load(contentUrl);
 			}
 
-			$(function() {
-			     $(".playback").click(function(e) {
-			
+			// Volume button in the top nav triggers this function.
+			function volumeControl() 
+			{
+		
 			       var video = document.getElementsByTagName('video')[0];
-			       if (video.paused)
-			         video.play();
-			       else
-			         video.pause();
-			     });
-			   });	
+			       
+			       // Mission Story section exists
+			       if(typeof video !== 'undefined' && video !== null)
+			       {
+				       if (video.paused)
+				         video.play();
+				       else
+				         video.pause();
+				   }
+				   
+				   // Music section exists
+				   else if( typeof sound !== 'undefined' && sound !== null)
+				   {
+						if(sound.isPaused())
+						{
+							sound.play();
+						}
+						else
+						{
+							sound.pause();
+						}
+				   }
+			}
+	
+			// Plays or Pause audio
+			function playPauseAudio() 
+			{
+				if(sound.isPaused())
+				{
+					sound.play();
+				}
+				else
+				{
+					sound.pause();
+				}
+			}	   	
 		</script>
 
   </head>

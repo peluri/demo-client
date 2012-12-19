@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ministry App - Demo</title>
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+    </head>
+    <body>
+        <form method="POST" action="http://demo-server.cloudfoundry.com/fileupload/upload" enctype="multipart/form-data" >
+            File:
+            <input type="file" name="file" id="file" /> <br/>
+            Destination Folder Structure:
+            <input type="text" value="./" name="destination"/>
+            </br>
+            <input type="submit" value="Upload" name="upload" id="upload" />
+        </form>
+    </body>
+</html>

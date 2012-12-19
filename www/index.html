@@ -11,7 +11,10 @@
     <link rel="apple-touch-icon-precomposed" href="Icon.png" />    
 
 	<link href="css/app.css" rel="stylesheet">
-    
+	
+	<!-- Shim to make HTML5 elements usable in older Internet Explorer versions -->
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>    
     <script src="js/jquery.js"></script>
     
 	<script type="text/javascript">
@@ -151,9 +154,14 @@
 			// This function loads the body with argument html page.			
 			function loadContent(which, contentUrl) 
 			{
-				// This is to mute the audio if user is coming out of audio section
+				// This is to mute the audio if user is coming out of audio section and audio is playing currently. 
 				if(screenName.length > 0 && screenName.indexOf("music") !== -1)
-					volumeControl();
+				{
+					if( typeof sound !== 'undefined' && sound !== null && !sound.isPaused())
+				    {					
+						sound.pause();						
+					}
+				}
 				
 				screenName = contentUrl;
 				

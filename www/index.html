@@ -36,6 +36,7 @@
 	<script type="text/javascript">
 			var carouselFlag = parseInt(1); 
 			var screenName = '';
+			var currentScreenCounter = 0;
 						
 			$(document).ready(function() {
 
@@ -164,6 +165,36 @@
 				}
 				
 				screenName = contentUrl;
+				
+				/***** This is for PC arrow button driven navigation ********/
+				if(contentUrl.indexOf("scorecard") !== -1)
+				{
+					currentScreenCounter = 0;
+				}
+				else if(contentUrl.indexOf("lesson") !== -1)
+				{
+					currentScreenCounter = 1;
+				} 
+				else if(contentUrl.indexOf("music") !== -1)
+				{
+					currentScreenCounter = 2;
+				} 
+				else if(contentUrl.indexOf("missionStory") !== -1)
+				{
+					currentScreenCounter = 3;
+				} 
+				else if(contentUrl.indexOf("memoryVerse") !== -1)
+				{
+					currentScreenCounter = 4;
+				} 
+				else if(contentUrl.indexOf("games") !== -1)
+				{
+					currentScreenCounter = 5;
+				} 
+				else if(contentUrl.indexOf("settings") !== -1)
+				{
+					currentScreenCounter = 6;
+				} 
 				
 				$('#div_content').load(contentUrl);
 			}

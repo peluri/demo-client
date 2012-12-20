@@ -32,8 +32,73 @@
 				 }*/
 			}
 
-
 		</script>
+
+		<script type="text/javascript">
+		
+		var string = [
+					  {"id":1, "htmlPageName":"./partials/scorecard_content.html"}, 
+					  {"id":2, "htmlPageName":"./partials/lesson_content.html"}, 
+					  {"id":3, "htmlPageName":"./partials/music_v2.html"},
+					  {"id":4, "htmlPageName":"./partials/missionStory_content.html"},
+					  {"id":5, "htmlPageName":"./partials/memoryVerse_content.html"},
+					  {"id":6, "htmlPageName":"./partials/games_content.html"},
+					  {"id":7, "htmlPageName":"./partials/settings_content.html"},
+					  ];
+		var arrayOfObjects = eval(string);
+
+					
+		function contentPresenter(navigation)
+		{
+			if(navigation === 'next')
+			{
+			    if(currentScreenCounter > 5)
+			    {
+			    	currentScreenCounter = 0;
+			    }
+			    else
+			    {
+			    	currentScreenCounter++;
+			    }
+		    	
+			}
+			else
+			{
+			    if(currentScreenCounter <= 0)
+			    {
+			    	currentScreenCounter = 6;
+			    }
+			    else
+			    {
+			    	currentScreenCounter--;
+			    }
+			    				
+			}
+					
+			
+				
+			for (var i = 0; i < arrayOfObjects.length; i++) 
+			{
+			    var object = arrayOfObjects[i];
+			    for (var property in object) 
+			    {
+			        //alert('item ' + i + ': ' + property + '=' + object[property]);
+			    }
+			    
+			    // If property names are known beforehand, you can also just do e.g.
+			    // alert(object.id + ',' + object.Title);
+			}
+			
+			    //alert("currentScreenCounter =" + currentScreenCounter + ", ID:" + arrayOfObjects[currentScreenCounter]);
+			    //alert("currentScreenCounter =" + currentScreenCounter + ", ID:" + arrayOfObjects[currentScreenCounter] + ", screen name: " + arrayOfObjects[currentScreenCounter].htmlPageName);
+			    loadContent(this, arrayOfObjects[currentScreenCounter].htmlPageName);
+			    	
+			    
+			    			
+		}
+		
+		</script>		
+		
 
 	</head>
 	<body >
@@ -49,9 +114,9 @@
 							<a href="javascript:loadContent(this, './partials/memoryVerse_content.html');"><img src="images/Memory_Verses.png" alt="Memoery Verses" title="Memoery Verses"  /></a>
 							<a href="javascript:loadContent(this, './partials/games_content.html');"><img src="images/games.png" alt="Games" title="Games"  /></a>
 
-							<a href="javascript:loadContent(this, './partials/games_content.html');"><img src="images/buttin_back.png" /></a>
-							<a href="javascript:loadContent(this, './partials/upload_content.html');"><img src="images/button_pause.png" /></a>
-							<a href="javascript:loadContent(this, './partials/games_content.html');"><img src="images/button_forward.png" /></a>
+							<a href="javascript: contentPresenter('prev');"><img src="images/buttin_back.png" /></a>
+							<a href="javascript: loadContent(this, './partials/upload_content.html');"><img src="images/button_pause.png" /></a>
+							<a href="javascript: contentPresenter('next');"><img src="images/button_forward.png" /></a>
 
 							<a href="javascript:loadContent(this, './partials/settings_content.html');"><img src="images/settings.png" title="Settings" /></a>
 							<a href="javascript:volumeControl()" class="playback"><img src="./images/Volume.png" /></a>

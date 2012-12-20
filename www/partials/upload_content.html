@@ -5,13 +5,19 @@
 		<link rel="stylesheet" type="text/css" href="css/app.css">
     </head>
     <body>
-        <form method="POST" action="http://demo-server.cloudfoundry.com/fileupload/upload" enctype="multipart/form-data" >
+        <form method="post" action="http://demo-server.cloudfoundry.com/fileupload/upload" enctype="multipart/form-data" >
+        
+          <br/><br/><br/><br/><br/><br/>
+          
+          <p><B>
             File:
-            <input type="file" name="file" id="file" /> <br/>
+            	<input type="file" name="file" id="file" /> <br/>
             Destination Folder Structure:
-            <input type="text" value="./" name="destination"/>
-            </br>
+            	<input type="text" value="./" name="destination"/>
+            <br/>
             <input type="submit" value="Upload" name="upload" id="upload" />
+            </B>
+           </p>
         </form>
     </body>
 </html>

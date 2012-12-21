@@ -16,6 +16,8 @@ html {
 	-o-background-size: cover;
 	background-size: cover;
 	margin: 0px;
+	/*-webkit-border-radius: 20%;-moz-border-radius: 20%;border-radius: 20%;*/
+    
 }
 
 
@@ -250,6 +252,7 @@ img {
 		  -ms-interpolation-mode: bicubic;
 		  margin-top: 10%;
 		  margin-left: 0%;
+		  border-radius: 10%;
 	}
 }
 

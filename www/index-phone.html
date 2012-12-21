@@ -21,17 +21,17 @@
        	    </div>	
        	    
         	<div class="span4">
-        		<div id="carousel_inner">
-					<ul id="carousel_ul">
+        		<div id="carousel_inner" style="width:100%; overflow:hidden;float:left;">
+					<ul id="carousel_ul" style="list-style-type:none; left:-100%; width:1000%;position: relative; margin: 0">
 
-			            <li>
-			        		<div class="picture_image">
+			            <li style="float:left; width:10%; height: 5%; margin: 0">
+			        		<div class="picture_image" style="width:100%; position: relative;margin-right: 0%; margin-top: 0%; vertical-align: top;">
 			        			<a href="javascript:loadContent(this, './partials/memoryVerse_content.html');"><img src="images/Memory_Verses.png" alt="Memoery Verses" title="Memoery Verses"  /></a>
 								<a href="javascript:loadContent(this, './partials/games_content.html');"><img src="images/games.png" alt="Games" title="Games"  /></a>
 				        		<a href="javascript:loadContent(this, './partials/settings_content.html');"><img src="images/settings.png" title="Settings" /></a>
 			        		</div>
 			        	</li>
-						<li>
+						<li style="float:left; width:10%; height: 5%; margin: 0">
 							<div class="picture_image">
 				        		<a href="javascript:loadContent(this, './partials/scorecard_content.html');"><img src="images/Scorecard.png" alt="Score Card" title="Scorecard"  /></a>
 				        		<a href="javascript:loadContent(this, './partials/upload_content.html');"><img  class="img-format" src="images/Lessons.png" alt="Lessons" title="Lessons"  /></a>
@@ -53,6 +53,17 @@
         	</div><!-- span10 offset2 -->
       
 			<script type="text/javascript">
+						
+			$(document).ready(function() {
+
+				$('#carousel_ul').css({
+						'left' : '-100%'
+					}, {
+						'list-style-type' : 'none'
+					});
+			});
+
+			
 					
 				/**  Initially load memory verse screen. **/		    
 				$(document).ready(function()

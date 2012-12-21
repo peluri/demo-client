@@ -217,7 +217,7 @@
 				   // Music section exists
 				   else if( typeof sound !== 'undefined' && sound !== null)
 				   {
-						if(sound.isPaused())
+						if(sound.isPaused() && currentScreenCounter === 2)
 						{
 							sound.play();
 						}

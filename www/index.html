@@ -151,10 +151,14 @@
 			       // Mission Story section exists
 			       if(typeof video !== 'undefined' && video !== null)
 			       {
-				       if (video.paused)
+				       /*if (video.paused)
 				         video.play();
 				       else
-				         video.pause();
+				         video.pause();*/
+				         if (video.muted) 
+						    video.muted = false;
+						 else 
+						    video.muted = true;
 				   }
 				   
 				   // Music section exists

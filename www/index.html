@@ -12,20 +12,41 @@
 
 	<link href="css/app.css" rel="stylesheet">
 	
+	
 	<!-- Shim to make HTML5 elements usable in older Internet Explorer versions -->
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>    
+    <script src="js/html5.js"></script>    
     <script src="js/jquery.js"></script>
     
 	<script type="text/javascript">
 	
-		// $(window).bind('resize', function() { location.reload(); });
+		//$(window).bind('resize', function() { location.reload(); });
+		
+		 
+		// Orientation change callback functionality.		
+		$(window).bind( 'orientationchange', function(e){
+			
+			// Based on screen length load PC version or Device version.
+		    if (screen.width <= 800) {    					    	
+				$('#my-container').load('topnav_phone.html');
+			} else {
+				$('#my-container').load('topnav_pc.html');
+			}
+			
+			// disable user zoom/scaling for tablets and PCs
+			if(screen.width > 420)
+	    	{
+ 				var viewportmeta = document.querySelector('meta[name="viewport"]');
+    			if (viewportmeta) 
+        			viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
+			}
+		});
 		
 		/**  Based on screen/browser width load full blown page or condensed page. **/		    
 		$(window).on('load', function () 
 		{
-			//alert((this).width());
-			if ($(this).width() <= 770) {
+			//alert(screen.width);
+			if (screen.width <= 800) {
 				$('#my-container').load('topnav_phone.html');
 			} else {
 				$('#my-container').load('topnav_pc.html');

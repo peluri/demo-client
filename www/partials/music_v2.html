@@ -18,27 +18,24 @@
 				loop: false
 			});		
 			
-			document.addEventListener("deviceready", function () {
-alert('device ready')
-}, false)
 			// Play the music on Audio
+			$(document).ready(function()
+			{
+				sound.play();
+			});
+			
 
-				$(document).ready(function() {
-					//jConfirm('isSupported=' + buzz.isSupported() + ', isMP3Supported=' + buzz.isMP3Supported() + ', isOGGSupported=' + buzz.isOGGSupported() + ', isAACSupported=' + buzz.isAACSupported() + ', isWAVSupported=' + buzz.isWAVSupported());
-					sound.play();
-				});
-
+			
+			
 	    </script>
 
 	</head>
 	<body>
 		<div class="contentSpan10">
-		    <!--a href="javascript: playPauseAudio();">
+		    <a href="javascript: playPauseAudio();">
 				<img class="img_content" src="media/pics/music.png" />
-			</a-->
-<script type="text/javascript">
-	document.write('<h1>isSupported=' + buzz.isSupported() + ', isMP3Supported=' + buzz.isMP3Supported() + ', isOGGSupported=' + buzz.isOGGSupported() + ', isAACSupported=' + buzz.isAACSupported() + ', isWAVSupported=' + buzz.isWAVSupported() + '</h1>');
-</script>
+			</a>
+
 		</div>
 	</body>
 </html>

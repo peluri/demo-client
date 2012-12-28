@@ -61,6 +61,52 @@ p {
   line-height: 18px;
 }
 
+	/* New Banner Sliding Gallery
+	------------------------------------------------------------------ */
+	
+	#carousel_inner {
+		float:left; /* important for inline positioning */
+		width:100%; /* important (this width = width of list item(including margin) * items shown */
+		overflow:hidden;  /* important (hide the items outside the div) */
+		/* non-important styling bellow */
+	}
+	
+	#carousel_ul {
+		position:relative;
+		left:-100%; /* important (this should be negative number of list items width(including margin) */
+		list-style-type: none; /* removing the default styling for unordered list items */
+		margin: 0px;
+		padding: 0px;
+		float:left;
+		width:1000%; /* important */
+		/* non-important styling bellow */
+	}
+	
+	#carousel_ul li{
+		float: left; /* important for inline positioning of the list items */
+		width: 10%;  /* fixed width, important */
+		/* just styling bellow*/
+		height:5%;
+		margin: 0;
+	}
+	
+	
+	#carousel_ul li .picture_image {	
+		position:relative;
+		margin: 0%;
+	}	
+
+  
+	.carousel_img {
+		  width: auto\9;
+		  height: auto;
+		  max-width: 110%;
+		  margin: 6% 0% 0% 0%;
+		  border: 0;
+		  margin: 0;
+		  -ms-interpolation-mode: bicubic;		  
+	}
+
 /* This styling is for all images.
 ------------------------------------------------------------------ */
 
@@ -222,57 +268,6 @@ img {
 		margin: 1% 0% 0% -2%;
 	}
 
-	/* New Banner Sliding Gallery
-	------------------------------------------------------------------ */
-	
-	#carousel_inner {
-		float:left; /* important for inline positioning */
-		width:100%; /* important (this width = width of list item(including margin) * items shown */
-		overflow:hidden;  /* important (hide the items outside the div) */
-		/* non-important styling bellow */
-	}
-	
-	#carousel_ul {
-		position:relative;
-		left:-100%; /* important (this should be negative number of list items width(including margin) */
-		list-style-type: none; /* removing the default styling for unordered list items */
-		margin: 0px;
-		padding: 0px;
-		float:left;
-		width:1000%; /* important */
-		/* non-important styling bellow */
-	}
-	
-	#carousel_ul li{
-		float: left; /* important for inline positioning of the list items */
-		width: 10%;  /* fixed width, important */
-		/* just styling bellow*/
-		height:5%;
-		margin: 0;
-	}
-	
-	
-	#carousel_ul li .picture_image {	
-		position:relative;
-		margin: 0%;
-	}	
-
-	/* This is for main content and applied to all htmls in "partials" folder. */
-	.contentSpan10{
-		position: relative;
-		width: 100%;
-	}
-	
-   
-	.carousel_img {
-		  width: auto\9;
-		  height: auto;
-		  max-width: 110%;
-		  margin: 6% 0% 0% 0%;
-		  border: 0;
-		  margin: 0;
-		  -ms-interpolation-mode: bicubic;		  
-	}
 	
 	.img_content, .h_iframe .ratio {
 	  margin-left: 0%;

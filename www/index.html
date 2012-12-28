@@ -24,10 +24,11 @@
 		/**  Based on screen/browser width load full blown page or condensed page. **/		    
 		$(window).on('load', function () 
 		{
-			if ($(this).width() <= 768) {
-				$('#my-container').load('index-phone.html');
+			//alert((this).width());
+			if ($(this).width() <= 770) {
+				$('#my-container').load('topnav_phone.html');
 			} else {
-				$('#my-container').load('index_pc.html');
+				$('#my-container').load('topnav_pc.html');
 			}
 			
 		});

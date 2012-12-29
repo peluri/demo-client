@@ -113,6 +113,7 @@ p {
 img, .img_hdr {
   width: auto\9;
   height: auto;
+  max-width: 100%;
   vertical-align: middle;
   border: 0;
   margin: 0;
@@ -248,10 +249,17 @@ img, .img_hdr {
  	}
 }
 
+@media screen and (max-width: 481px){
+	.videoStyle {
+       width: 90%;
+     }
+}
+
 @media screen and (min-width: 479px) and (max-width: 599px){
     img {
 	  margin: 0% 0% 0% 3%;
 	}
+
 }
 @media screen and (min-width: 599px) and (max-width: 769px){
     img {
@@ -292,9 +300,6 @@ img, .img_hdr {
     width: 80%;
     }
     
-    .img_hdr{
-    	margin: 0;
-    }
     
 }
 

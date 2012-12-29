@@ -19,20 +19,33 @@
     <script src="js/jquery.js"></script>
     
 	<script type="text/javascript">
-	
-		//$(window).bind('resize', function() { location.reload(); });
 		
-		 
+		/**  Based on screen/browser width load full blown page or condensed page. **/		    
+		$(window).on('load', function () 
+		{
+			//if( navigator.userAgent.match(/Android/i) ||  navigator.userAgent.match(/webOS/i) ||   navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i))
+			//if((this).width <= 820)
+			if(screen.width <= 820)
+      		{
+				$('#my-container').load('topnav_phone.html');
+			} 
+			else 
+			{
+				$('#my-container').load('topnav_pc.html');
+			}
+			
+		});
+		
 		// Orientation change callback functionality.		
 		$(window).bind( 'orientationchange', function(e){
-			
+
 			// Based on screen length load PC version or Device version.
-		    if (screen.width <= 800) {    					    	
+		    if (screen.width <= 820) {    					    	
 				$('#my-container').load('topnav_phone.html');
 			} else {
 				$('#my-container').load('topnav_pc.html');
 			}
-			
+
 			// disable user zoom/scaling for tablets and PCs
 			if(screen.width > 420)
 	    	{
@@ -40,18 +53,6 @@
     			if (viewportmeta) 
         			viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
 			}
-		});
-		
-		/**  Based on screen/browser width load full blown page or condensed page. **/		    
-		$(window).on('load', function () 
-		{
-			//alert(screen.width);
-			if (screen.width <= 800) {
-				$('#my-container').load('topnav_phone.html');
-			} else {
-				$('#my-container').load('topnav_pc.html');
-			}
-			
 		});
 	</script>
 	
